@@ -1,0 +1,14 @@
+<h1>Iniciar sesion</h1>
+
+
+<%=form_for :post, url: validateLogin_url do |f|%>
+    <p> Usuario: </p>
+    <%= f.text_field :user  %>
+    <p> Contraseña: </p>
+    <%= f.password_field :password %>
+    <br>
+    <br>
+    <%= f.submit "Iniciar sesion" %>
+<% end %>
+
+<!-- Comentario -->
