@@ -1,21 +1,22 @@
 class LoginController < ApplicationController
 
     def index
+        if session[:usuario] != nil
+            redirect_to main_path and return
+        end
     end
 
     def validate
         @usuario = params[:post][:user]
         @contrasena = params[:post][:password]
 
-        u = User.where(:usuario => @usuario).where(:contrasena => @contrasena).all
-
-        if u.length == 0
-            redirect_to error_path and return
-        else
-            u.each do |registro|
-                session[:usuario] = registro.id
-            end
+        begin
+            user = User.where(:contrasena => @contrasena).find(@usuario)
+            
+            session[:usuario] = user.usuario
             redirect_to main_path and return
+        rescue => exception
+            redirect_to login_path and return
         end
         
         redirect_to login_path and return

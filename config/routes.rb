@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get 'main', to: 'main#index'
   get 'error', to: 'main#error'
+  get 'logout', to: 'main#logout'
 
   #Rutas POST
   post 'validateLogin', to: 'login#validate'
