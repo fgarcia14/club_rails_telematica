@@ -16,7 +16,7 @@ class LoginController < ApplicationController
             session[:usuario] = user.usuario
             redirect_to main_path and return
         rescue => exception
-            redirect_to login_path and return
+            redirect_to error_path and return
         end
         
         redirect_to login_path and return
