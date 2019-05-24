@@ -1,2 +1,53 @@
 <h1>¡Bienvenido <%= @nombre %>!</h1>
 <%= link_to "Cerrar Sesion", logout_path %>
+
+<% if @encuesta == nil %>
+
+    <%= form_for :post, url: enviarEncuesta_url do%>
+        <h3>Pregunta 1</h3>
+        <select name="pre1">
+            <option value="1">Respuesta 1</option>
+            <option value="2">Respuesta 2</option>
+            <option value="3">Respuesta 3</option>
+            <option value="4">Respuesta 4</option>
+            <option value="5">Respuesta 5</option>
+        </select>
+        <h3>Pregunta 2</h3>
+        <select name="pre2">
+            <option value="1">Respuesta 1</option>
+            <option value="2">Respuesta 2</option>
+            <option value="3">Respuesta 3</option>
+            <option value="4">Respuesta 4</option>
+            <option value="5">Respuesta 5</option>
+        </select>
+        <h3>Pregunta 3</h3>
+        <select name="pre3">
+            <option value="1">Respuesta 1</option>
+            <option value="2">Respuesta 2</option>
+            <option value="3">Respuesta 3</option>
+            <option value="4">Respuesta 4</option>
+            <option value="5">Respuesta 5</option>
+        </select>
+        <h3>Pregunta 4</h3>
+        <select name="pre4">
+            <option value="1">Respuesta 1</option>
+            <option value="2">Respuesta 2</option>
+            <option value="3">Respuesta 3</option>
+            <option value="4">Respuesta 4</option>
+            <option value="5">Respuesta 5</option>
+        </select>
+        <h3>Pregunta 5</h3>
+        <select name="pre5">
+            <option value="1">Respuesta 1</option>
+            <option value="2">Respuesta 2</option>
+            <option value="3">Respuesta 3</option>
+            <option value="4">Respuesta 4</option>
+            <option value="5">Respuesta 5</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit">
+
+    <% end %>
+
+<%end%>

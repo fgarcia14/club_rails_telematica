@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_05_150039) do
+ActiveRecord::Schema.define(version: 2019_05_24_150132) do
+
+  create_table "surveys", primary_key: "user", id: :string, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "pre1"
+    t.integer "pre2"
+    t.integer "pre3"
+    t.integer "pre4"
+    t.integer "pre5"
+  end
 
   create_table "users", primary_key: "usuario", id: :string, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "contrasena"

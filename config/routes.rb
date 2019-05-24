@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   #Rutas POST
   post 'validateLogin', to: 'login#validate'
+
+  post 'enviarEncuesta', to: 'main#encuesta'
 end

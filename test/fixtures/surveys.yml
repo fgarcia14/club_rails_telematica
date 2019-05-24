@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pre1: 
+  pre2: 
+  pre3: 
+  pre4: 
+  pre5: 
+
+two:
+  pre1: 
+  pre2: 
+  pre3: 
+  pre4: 
+  pre5: 
